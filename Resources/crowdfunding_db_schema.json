@@ -1,0 +1,76 @@
+{
+    "category_schema": {
+        "category_id": {
+            "type": "int"
+        },
+        "category": {
+            "type": "string"
+        }
+    },
+    "subcategory_schema": {
+        "subcategory_id": {
+            "type": "int"
+        },
+        "subcategory": {
+            "type": "string"
+        }
+    },
+    "contacts_schema": {
+        "contact_id": {
+            "type": "int"
+        },
+        "first_name": {
+            "type": "string"
+        },
+        "last_name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        }
+    },
+    "campaign_schema": {
+        "cf_id": {
+            "type": "int"
+        },
+        "contact_id": {
+            "type": "int"
+        },
+        "company_name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "goal": {
+            "type": "float"
+        },
+        "pledged": {
+            "type": "float"
+        },
+        "outcome": {
+            "type": "string"
+        },
+        "backers_count": {
+            "type": "int"
+        },
+        "country": {
+            "type": "string"
+        },
+        "currency": {
+            "type": "string"
+        },
+        "launched_date": {
+            "type": "string"
+        },
+        "end_date": {
+            "type": "string"
+        },
+        "category_id": {
+            "type": "string"
+        },
+        "subcategory_id": {
+            "type": "string"
+        }
+    }
+}
