@@ -9,11 +9,12 @@ This repository contains an Extract, Transform, and Load (ETL) project focused o
 
 This repository contains the following:
 
-*   **`Crowdfunding_ETL.ipynb`**: A Jupyter Notebook that performs the core ETL process, including data extraction, transformation, and preparation for loading.
-*   **`Crowdfunding_SQL_Schema.ipynb`**: A Jupyter Notebook that sets up the database schema for the project, including creating tables and defining relationships.
-*   **`SQL_Data_Upload.ipynb`**: A Jupyter Notebook that contains code to upload data into a database using the previously created schema.
-*   **`Crowdfunding ETL Mini Project Starter Code Explanation.docx`**: A document describing the logic of the data processing using Python in `Crowdfunding_ETL.ipynb`.
-*   **`Crowdfunding ETL SQL DB Setup.docx`**: A document describing the database set up process from the  `Crowdfunding_SQL_Schema.ipynb` Notebook.
+*   **`README.md`**: This file that details the contents of this GitHub repo.
+*   **`ETL_Mini_Project_AGerwer_JRosario.ipynb`**: A Jupyter Notebook that performs the core ETL process, including data extraction, transformation, and preparation for loading.
+*   **`ETL_SQL_DB_Setup_AGerwer_JRosario.ipynb`**: A Jupyter Notebook that sets up the database schema for the project, including creating tables and defining relationships.
+*   **`install_psycopg2.ipynb`**: A Jupyter Notebook that contains code to install the psycopg2 Python module.
+*   **`ETL_Mini_Project_AGerwer_JRosario.pdf`**: A document describing the logic of the data processing using Python in `ETL_Mini_Project_AGerwer_JRosario.ipynb` Notebook.
+*   **`ETL_SQL_DB_Setup_Explanation_AGerwer_JRosario.pdf`**: A document describing the database set up process from the `ETL_SQL_DB_Setup_AGerwer_JRosario.ipynb` Notebook.
 *   **`Resources/`**: A directory containing the following files:
     *   **`contacts.xlsx`**: Raw input data containing information about people connected to various campaigns.
     *   **`crowdfunding.xlsx`**: Raw input data containing information about crowdfunding campaigns.
@@ -21,13 +22,13 @@ This repository contains the following:
     *   **`subcategory.csv`**: Derived CSV file containing unique subcategories for the campaigns
     *   **`contacts.csv`**: Derived CSV file containing contact information, cleaned and formatted.
     *   **`campaign.csv`**: Derived CSV file containing campaign data, transformed and ready for database import.
-    *   **`crowdfunding_db.sql`**: Database output in SQL format.
+    *   **`crowdfunding_db.sql`**: Database creation file in MongoSQL format.
     *   **`crowdfunding_db_schema.json`**: Database schema output in JSON format.
     *   **`ETL_SQL_DB_Schema.pgerd`**: ERD representation of the database.
 
 ## Data Processing Logic
 
-The ETL process is performed in the `Crowdfunding_ETL.ipynb` Notebook and is explained in detail within the `Crowdfunding ETL Mini Project Starter Code Explanation.docx` document. Here is an overview:
+The ETL process is performed in the `ETL_Mini_Project_AGerwer_JRosario.ipynb` Notebook and is explained in detail within the `ETL_Mini_Project_AGerwer_JRosario.pdf` document. Here is an overview:
 
 1.  **Importing and Setting Up:** The notebook begins by importing necessary Python libraries: `pandas`, `numpy`, `textwrap`, `datetime`, `json`, `re`, and `os`. Pandas display options are set to improve readability.
 
@@ -43,7 +44,7 @@ The ETL process is performed in the `Crowdfunding_ETL.ipynb` Notebook and is exp
 
 5.  **Formatting and Counting Unique Items:** The unique categories and subcategories lists are formatted for display, and the counts of unique items is generated.
 
-6. **Creating Numerical Arrays**: Two numpy arrays are created (`category_ids` and `subcategory_ids`) for assigning numerical IDs.
+6.  **Creating Numerical Arrays**: Two numpy arrays are created (`category_ids` and `subcategory_ids`) for assigning numerical IDs.
 
 7.  **Creating String-Based IDs:** List comprehensions are used to create category IDs (e.g., `"cat1"`) and subcategory IDs (e.g., `"subcat1"`) by concatenating strings to the numerical IDs.
 
@@ -64,7 +65,7 @@ The ETL process is performed in the `Crowdfunding_ETL.ipynb` Notebook and is exp
 
 ## Database Setup Logic
 
-The database setup is detailed within the `Crowdfunding ETL SQL DB Setup.docx` document and implemented in the `Crowdfunding_SQL_Schema.ipynb` Notebook. Here's an overview of the database creation process:
+The database setup is detailed within the `ETL_SQL_DB_Setup_Explanation_AGerwer_JRosario.pdf` document and implemented in the `ETL_SQL_DB_Setup_AGerwer_JRosario.ipynb` Notebook. Here's an overview of the database creation process:
 
 1. **SQLAlchemy Setup:** The notebook uses SQLAlchemy to set up a connection to a PostgreSQL database and creates the tables (category, subcategory, contacts, and campaign).
 2. **Schema File Output:** A schema file (`crowdfunding_db_schema.sql`) is created by using SQLAlchemy to iterate through the table metadata and output the SQL create table statements.
@@ -126,7 +127,7 @@ Here is a conceptual sketch of the database using an Entity Relationship Diagram
                         last_name
                         email
 
-The actual ERD diagram is at the bottom of page 4 of the ETL_SQL_DB_Setup_Explanation file.
+The actual ERD diagram is at the bottom of page 4 of the `ETL_SQL_DB_Setup_Explanation_AGerwer_JRosario.pdf`document.
 
 ## License
 
